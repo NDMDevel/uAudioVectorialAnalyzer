@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/uAudioVectorialAnalizer.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=uAudioVectorialAnalizer.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=uaudiovectorialanalizer.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/uAudioVectorialAnalyzer.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=uAudioVectorialAnalyzer.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=uaudiovectorialanalyzer/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/uaudiovectorialanalizer.x/bin
+makeDirectory ${TMPDIR}/uaudiovectorialanalyzer/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/uaudiovectorialanalizer.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/uaudiovectorialanalyzer.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/uaudiovectorialanalizer.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/uaudiovectorialanalyzer.tar *
 checkReturnCode
 
 # Cleanup
